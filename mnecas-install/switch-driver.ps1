@@ -6,7 +6,7 @@ param(
 
 $NewDriverUrl = "https://github.com/mnecas/kvm-guest-drivers-windows/raw/refs/heads/fix_viostor_iodepth/mnecas-install"
 $LocalDir = "C:\viostor-new"
-$IsoPath = "E:\viostor\2k19\amd64"
+$IsoPath = "D:\viostor\2k19\amd64"
 
 function Get-CurrentOemName {
     $output = pnputil /enum-drivers 2>&1 | Out-String
@@ -61,17 +61,25 @@ switch ($Action) {
     "new" {
         Write-Host "`n=== Installing NEW driver (fix_viostor_iodepth) ===" -ForegroundColor Green
 
-        if (-not (Test-Path $LocalDir)) { mkdir $LocalDir | Out-Null }
+        if (Test-Path $LocalDir) { Remove-Item $LocalDir -Recurse -Force -ErrorAction SilentlyContinue }
+        mkdir $LocalDir | Out-Null
 
         Write-Host "Downloading driver files..."
         Invoke-WebRequest -Uri "$NewDriverUrl/viostor.inf" -OutFile "$LocalDir\viostor.inf"
         Invoke-WebRequest -Uri "$NewDriverUrl/viostor.sys" -OutFile "$LocalDir\viostor.sys"
-        Invoke-WebRequest -Uri "$NewDriverUrl/viostor.pdb" -OutFile "$LocalDir\viostor.pdb"
 
         $cert = Ensure-Certificate
-        Write-Host "Generating and signing catalog..."
-        New-FileCatalog -Path $LocalDir -CatalogFilePath "$LocalDir\viostor.cat" -CatalogVersion 2.0 | Out-Null
-        Set-AuthenticodeSignature -FilePath "$LocalDir\viostor.cat" -Certificate $cert | Out-Null
+        Write-Host "Signing driver..."
+        try {
+            New-FileCatalog -Path $LocalDir -CatalogFilePath "$LocalDir\viostor.cat" -CatalogVersion 2.0 | Out-Null
+            Set-AuthenticodeSignature -FilePath "$LocalDir\viostor.cat" -Certificate $cert | Out-Null
+            Write-Host "Catalog signed." -ForegroundColor Green
+        } catch {
+            Write-Host "Catalog generation failed, signing files directly..." -ForegroundColor Yellow
+            Set-AuthenticodeSignature -FilePath "$LocalDir\viostor.sys" -Certificate $cert | Out-Null
+            Set-AuthenticodeSignature -FilePath "$LocalDir\viostor.inf" -Certificate $cert | Out-Null
+            Write-Host "Files signed." -ForegroundColor Green
+        }
 
         Write-Host "Removing old driver packages..."
         foreach ($oem in Get-CurrentOemName) {
