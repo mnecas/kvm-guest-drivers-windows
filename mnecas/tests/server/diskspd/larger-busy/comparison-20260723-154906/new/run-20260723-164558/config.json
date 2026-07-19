@@ -1,0 +1,29 @@
+﻿{
+    "BlockSizes":  [
+                       "512",
+                       "4K",
+                       "16K",
+                       "64K",
+                       "256K",
+                       "1M",
+                       "2M"
+                   ],
+    "StartTime":  "2026-07-23T16:45:58.8106029-07:00",
+    "Disk":  "#1",
+    "TestFileSize":  "1G",
+    "Warmup":  30,
+    "WritePercents":  [
+                          100
+                      ],
+    "DiskSpdVersion":  "Usage: C:\\ProgramData\\chocolatey\\lib\\diskspd\\tools\\amd64\\diskspd.exe [options] target1 [ target2 [ target3 ...] ]",
+    "QueueDepths":  [
+                        16,
+                        32,
+                        64,
+                        128,
+                        256
+                    ],
+    "Random":  true,
+    "Duration":  60,
+    "NumWorkers":  4
+}

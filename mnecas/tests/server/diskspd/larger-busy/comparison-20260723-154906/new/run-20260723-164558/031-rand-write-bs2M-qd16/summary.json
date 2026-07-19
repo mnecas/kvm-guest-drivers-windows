@@ -1,0 +1,11 @@
+﻿{
+    "BW_MBps":  1705.72,
+    "Lat_Avg":  75040,
+    "Lat_P50":  75081,
+    "IOPS_Min":  853,
+    "IOPS_Avg":  853,
+    "Lat_P99":  81909,
+    "CPU_Avg":  1.7,
+    "IOPS_Max":  853,
+    "Lat_P999":  84040
+}

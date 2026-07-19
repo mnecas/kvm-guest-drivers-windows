@@ -1,0 +1,1164 @@
+PS C:\Users\Administrator> C:\diskspd-benchmark.ps1
+= * 70 
+DISKSPD BENCHMARK SUITE
+= * 70
+Disk:        #1
+Workers:     4
+Duration:    60s + 30s warmup
+Tests:       70 combinations
+Est. time:   1.8 hours
+Output:      C:\benchmark-results\run-20260723-070944
+ISR/DPC:     ENABLED (xperf)
+= * 70
+ 
+
+======================================================================
+TEST 1/70 : 001-rand-write-bs512-qd16
+  Block=512  QueueDepth=16  Write=100%  Workers=4 
+  ETA: calculating... remaining
+======================================================================
+  Running: diskspd -b512 -d60 -W30 -o16 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=224880  min=224880  max=224880
+    BW:      109.8 MiB/s
+    Latency: avg=284us  p50=281us  p99=431us  p99.9=1310us
+    CPU:     58.11%
+
+
+======================================================================
+TEST 2/70 : 002-rand-write-bs512-qd32
+  Block=512  QueueDepth=32  Write=100%  Workers=4
+  ETA: 01:56:04 remaining 
+======================================================================
+  Running: diskspd -b512 -d60 -W30 -o32 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=244890  min=244890  max=244890
+    BW:      119.58 MiB/s
+    Latency: avg=523us  p50=479us  p99=870us  p99.9=3061us
+    CPU:     57.13%
+
+
+======================================================================
+TEST 3/70 : 003-rand-write-bs512-qd64
+  Block=512  QueueDepth=64  Write=100%  Workers=4
+  ETA: 01:52:57 remaining
+======================================================================
+  Running: diskspd -b512 -d60 -W30 -o64 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=252279  min=252279  max=252279
+    BW:      123.18 MiB/s
+    Latency: avg=1015us  p50=978us  p99=1811us  p99.9=4802us
+    CPU:     59.4%
+
+
+======================================================================
+TEST 4/70 : 004-rand-write-bs512-qd128
+  Block=512  QueueDepth=128  Write=100%  Workers=4
+  ETA: 01:50:13 remaining
+======================================================================
+  Running: diskspd -b512 -d60 -W30 -o128 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=256803  min=256803  max=256803
+    BW:      125.39 MiB/s
+    Latency: avg=1994us  p50=1891us  p99=4034us  p99.9=6995us
+    CPU:     66.38%
+
+
+======================================================================
+TEST 5/70 : 005-rand-write-bs512-qd256
+  Block=512  QueueDepth=256  Write=100%  Workers=4
+  ETA: 01:47:51 remaining
+======================================================================
+  Running: diskspd -b512 -d60 -W30 -o256 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=250155  min=250155  max=250155
+    BW:      122.15 MiB/s
+    Latency: avg=4093us  p50=3654us  p99=9363us  p99.9=19733us
+    CPU:     63.65%
+
+
+======================================================================
+TEST 6/70 : 006-rand-write-bs4K-qd16
+  Block=4K  QueueDepth=16  Write=100%  Workers=4
+  ETA: 01:45:48 remaining
+======================================================================
+  Running: diskspd -b4K -d60 -W30 -o16 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=223691  min=223691  max=223691
+    BW:      873.79 MiB/s 
+    Latency: avg=286us  p50=274us  p99=455us  p99.9=520us
+    CPU:     51.95%
+
+
+======================================================================
+TEST 7/70 : 007-rand-write-bs4K-qd32
+  Block=4K  QueueDepth=32  Write=100%  Workers=4
+  ETA: 01:44:41 remaining
+======================================================================
+  Running: diskspd -b4K -d60 -W30 -o32 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=243572  min=243572  max=243572
+    BW:      951.45 MiB/s
+    Latency: avg=525us  p50=512us  p99=834us  p99.9=989us
+    CPU:     51.14%
+
+
+======================================================================
+TEST 8/70 : 008-rand-write-bs4K-qd64
+  Block=4K  QueueDepth=64  Write=100%  Workers=4
+  ETA: 01:43:01 remaining
+======================================================================
+  Running: diskspd -b4K -d60 -W30 -o64 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=255046  min=255046  max=255046
+    BW:      996.27 MiB/s
+    Latency: avg=1004us  p50=947us  p99=1485us  p99.9=1884us
+    CPU:     51.3%
+
+
+======================================================================
+TEST 9/70 : 009-rand-write-bs4K-qd128
+  Block=4K  QueueDepth=128  Write=100%  Workers=4
+  ETA: 01:41:10 remaining
+======================================================================
+  Running: diskspd -b4K -d60 -W30 -o128 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=260843  min=260843  max=260843
+    BW:      1018.92 MiB/s
+    Latency: avg=1963us  p50=1852us  p99=3611us  p99.9=7695us
+    CPU:     62.94%
+
+
+====================================================================== 
+TEST 10/70 : 010-rand-write-bs4K-qd256
+  Block=4K  QueueDepth=256  Write=100%  Workers=4
+  ETA: 01:39:19 remaining
+======================================================================
+  Running: diskspd -b4K -d60 -W30 -o256 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=250967  min=250967  max=250967
+    BW:      980.34 MiB/s
+    Latency: avg=4080us  p50=3599us  p99=9362us  p99.9=43819us
+    CPU:     63.06%
+
+
+======================================================================
+TEST 11/70 : 011-rand-write-bs16K-qd16
+  Block=16K  QueueDepth=16  Write=100%  Workers=4
+  ETA: 01:37:34 remaining
+======================================================================
+  Running: diskspd -b16K -d60 -W30 -o16 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=108570  min=108570  max=108570
+    BW:      1696.41 MiB/s
+    Latency: avg=589us  p50=449us  p99=1454us  p99.9=1821us
+    CPU:     23.13%
+
+
+======================================================================
+TEST 12/70 : 012-rand-write-bs16K-qd32
+  Block=16K  QueueDepth=32  Write=100%  Workers=4
+  ETA: 01:36:00 remaining
+======================================================================
+  Running: diskspd -b16K -d60 -W30 -o32 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=108187  min=108187  max=108187
+    BW:      1690.42 MiB/s
+    Latency: avg=1183us  p50=1235us  p99=2035us  p99.9=2970us
+    CPU:     23.52%
+
+
+======================================================================
+TEST 13/70 : 013-rand-write-bs16K-qd64
+  Block=16K  QueueDepth=64  Write=100%  Workers=4
+  ETA: 01:34:23 remaining
+======================================================================
+  Running: diskspd -b16K -d60 -W30 -o64 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=108430  min=108430  max=108430
+    BW:      1694.22 MiB/s
+    Latency: avg=2361us  p50=2280us  p99=3681us  p99.9=4931us
+    CPU:     25.92%
+
+
+======================================================================
+TEST 14/70 : 014-rand-write-bs16K-qd128
+  Block=16K  QueueDepth=128  Write=100%  Workers=4
+  ETA: 01:32:48 remaining
+======================================================================
+  Running: diskspd -b16K -d60 -W30 -o128 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=108119  min=108119  max=108119
+    BW:      1689.36 MiB/s
+    Latency: avg=4735us  p50=4671us  p99=6685us  p99.9=7988us
+    CPU:     29.65%
+
+
+======================================================================
+TEST 15/70 : 015-rand-write-bs16K-qd256
+  Block=16K  QueueDepth=256  Write=100%  Workers=4
+  ETA: 01:31:13 remaining
+======================================================================
+  Running: diskspd -b16K -d60 -W30 -o256 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=108030  min=108030  max=108030
+    BW:      1687.97 MiB/s
+    Latency: avg=9478us  p50=9401us  p99=13881us  p99.9=15689us
+    CPU:     37.54%
+
+
+====================================================================== 
+TEST 16/70 : 016-rand-write-bs64K-qd16
+  Block=64K  QueueDepth=16  Write=100%  Workers=4
+  ETA: 01:29:42 remaining
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o16 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=27083  min=27083  max=27083
+    BW:      1692.69 MiB/s
+    Latency: avg=2363us  p50=2222us  p99=3578us  p99.9=4357us
+    CPU:     11.86%
+
+
+======================================================================
+TEST 17/70 : 017-rand-write-bs64K-qd32
+  Block=64K  QueueDepth=32  Write=100%  Workers=4
+  ETA: 01:28:05 remaining
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o32 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=27089  min=27089  max=27089
+    BW:      1693.05 MiB/s
+    Latency: avg=4725us  p50=4704us  p99=6596us  p99.9=8288us
+    CPU:     11.08%
+
+
+======================================================================
+TEST 18/70 : 018-rand-write-bs64K-qd64
+  Block=64K  QueueDepth=64  Write=100%  Workers=4
+  ETA: 01:26:29 remaining
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o64 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=27049  min=27049  max=27049
+    BW:      1690.58 MiB/s
+    Latency: avg=9464us  p50=9378us  p99=12144us  p99.9=17610us
+    CPU:     12.01%
+
+
+======================================================================
+TEST 19/70 : 019-rand-write-bs64K-qd128
+  Block=64K  QueueDepth=128  Write=100%  Workers=4
+  ETA: 01:24:53 remaining 
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o128 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=27073  min=27073  max=27073
+    BW:      1692.04 MiB/s
+    Latency: avg=18911us  p50=18830us  p99=22303us  p99.9=27424us
+    CPU:     13.27%
+
+
+======================================================================
+TEST 20/70 : 020-rand-write-bs64K-qd256
+  Block=64K  QueueDepth=256  Write=100%  Workers=4
+  ETA: 01:23:17 remaining
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o256 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=27060  min=27060  max=27060
+    BW:      1691.23 MiB/s
+    Latency: avg=37843us  p50=37400us  p99=59089us  p99.9=65825us
+    CPU:     12.69%
+
+
+======================================================================
+TEST 21/70 : 021-rand-write-bs256K-qd16
+  Block=256K  QueueDepth=16  Write=100%  Workers=4
+  ETA: 01:21:48 remaining
+======================================================================
+  Running: diskspd -b256K -d60 -W30 -o16 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=6771  min=6771  max=6771
+    BW:      1692.66 MiB/s
+    Latency: avg=9452us  p50=9382us  p99=11863us  p99.9=17445us
+    CPU:     2.87%
+
+
+======================================================================
+TEST 22/70 : 022-rand-write-bs256K-qd32
+  Block=256K  QueueDepth=32  Write=100%  Workers=4
+  ETA: 01:20:04 remaining 
+======================================================================
+  Running: diskspd -b256K -d60 -W30 -o32 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=6772  min=6772  max=6772
+    BW:      1692.89 MiB/s
+    Latency: avg=18902us  p50=18742us  p99=25079us  p99.9=37077us
+    CPU:     2.73%
+
+
+======================================================================
+TEST 23/70 : 023-rand-write-bs256K-qd64 
+  Block=256K  QueueDepth=64  Write=100%  Workers=4
+  ETA: 01:18:20 remaining
+======================================================================
+  Running: diskspd -b256K -d60 -W30 -o64 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=6768  min=6768  max=6768
+    BW:      1692.04 MiB/s
+    Latency: avg=37823us  p50=37799us  p99=45154us  p99.9=56732us
+    CPU:     3.09%
+
+
+======================================================================
+TEST 24/70 : 024-rand-write-bs256K-qd128
+  Block=256K  QueueDepth=128  Write=100%  Workers=4
+  ETA: 01:16:38 remaining
+======================================================================
+  Running: diskspd -b256K -d60 -W30 -o128 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=6774  min=6774  max=6774
+    BW:      1693.53 MiB/s
+    Latency: avg=75575us  p50=75182us  p99=115716us  p99.9=129199us
+    CPU:     3.4%
+
+
+======================================================================
+TEST 25/70 : 025-rand-write-bs256K-qd256
+  Block=256K  QueueDepth=256  Write=100%  Workers=4
+  ETA: 01:15:00 remaining
+====================================================================== 
+  Running: diskspd -b256K -d60 -W30 -o256 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=6778  min=6778  max=6778
+    BW:      1694.43 MiB/s
+    Latency: avg=151107us  p50=153275us  p99=276529us  p99.9=314384us
+    CPU:     3.37%
+
+
+======================================================================
+TEST 26/70 : 026-rand-write-bs1M-qd16
+  Block=1M  QueueDepth=16  Write=100%  Workers=4
+  ETA: 01:13:23 remaining
+======================================================================
+  Running: diskspd -b1M -d60 -W30 -o16 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=1694  min=1694  max=1694
+    BW:      1694.03 MiB/s
+    Latency: avg=37780us  p50=37746us  p99=43957us  p99.9=55991us
+    CPU:     1.4%
+
+
+======================================================================
+TEST 27/70 : 027-rand-write-bs1M-qd32
+  Block=1M  QueueDepth=32  Write=100%  Workers=4
+  ETA: 01:11:40 remaining
+======================================================================
+  Running: diskspd -b1M -d60 -W30 -o32 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=1695  min=1695  max=1695
+    BW:      1694.55 MiB/s
+    Latency: avg=75539us  p50=75477us  p99=116925us  p99.9=128592us
+    CPU:     1.69%
+
+
+======================================================================
+TEST 28/70 : 028-rand-write-bs1M-qd64
+  Block=1M  QueueDepth=64  Write=100%  Workers=4
+  ETA: 01:09:58 remaining
+======================================================================
+  Running: diskspd -b1M -d60 -W30 -o64 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=1700  min=1700  max=1700
+    BW:      1699.9 MiB/s
+    Latency: avg=150541us  p50=152276us  p99=267483us  p99.9=312794us
+    CPU:     2.56%
+
+
+======================================================================
+TEST 29/70 : 029-rand-write-bs1M-qd128
+  Block=1M  QueueDepth=128  Write=100%  Workers=4
+  ETA: 01:08:16 remaining
+======================================================================
+  Running: diskspd -b1M -d60 -W30 -o128 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=1697  min=1697  max=1697
+    BW:      1696.62 MiB/s
+    Latency: avg=301666us  p50=285733us  p99=955169us  p99.9=2039549us
+    CPU:     15.85%
+
+
+======================================================================
+TEST 30/70 : 030-rand-write-bs1M-qd256
+  Block=1M  QueueDepth=256  Write=100%  Workers=4
+  ETA: 01:06:35 remaining
+======================================================================
+  Running: diskspd -b1M -d60 -W30 -o256 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=1690  min=1690  max=1690
+    BW:      1689.6 MiB/s
+    Latency: avg=592634us  p50=562678us  p99=2216161us  p99.9=2939614us
+    CPU:     24.37%
+
+
+======================================================================
+TEST 31/70 : 031-rand-write-bs2M-qd16
+  Block=2M  QueueDepth=16  Write=100%  Workers=4
+  ETA: 01:04:55 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o16 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=848  min=848  max=848
+    BW:      1696.07 MiB/s
+    Latency: avg=75474us  p50=74981us  p99=116677us  p99.9=130513us
+    CPU:     1.07%
+
+
+======================================================================
+TEST 32/70 : 032-rand-write-bs2M-qd32
+  Block=2M  QueueDepth=32  Write=100%  Workers=4
+  ETA: 01:03:14 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o32 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=848  min=848  max=848
+    BW:      1695.37 MiB/s
+    Latency: avg=151021us  p50=153756us  p99=236242us  p99.9=270584us
+    CPU:     1.99%
+
+
+======================================================================
+TEST 33/70 : 033-rand-write-bs2M-qd64
+  Block=2M  QueueDepth=64  Write=100%  Workers=4
+  ETA: 01:01:34 remaining 
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o64 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=849  min=849  max=849
+    BW:      1697.86 MiB/s
+    Latency: avg=301982us  p50=296526us  p99=627027us  p99.9=956650us
+    CPU:     9.41%
+
+
+======================================================================
+TEST 34/70 : 034-rand-write-bs2M-qd128
+  Block=2M  QueueDepth=128  Write=100%  Workers=4
+  ETA: 00:59:53 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o128 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=848  min=848  max=848
+    BW:      1695.44 MiB/s
+    Latency: avg=609614us  p50=510082us  p99=2598607us  p99.9=4328998us
+    CPU:     39.79%
+
+
+======================================================================
+TEST 35/70 : 035-rand-write-bs2M-qd256
+  Block=2M  QueueDepth=256  Write=100%  Workers=4
+  ETA: 00:58:17 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o256 -t4 -Sh -L -w100 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=845  min=845  max=845
+    BW:      1690.3 MiB/s
+    Latency: avg=1207783us  p50=1040818us  p99=3142874us  p99.9=18276229us
+    CPU:     43.07%
+
+
+======================================================================
+TEST 36/70 : 036-rand-read-bs512-qd16
+  Block=512  QueueDepth=16  Write=0%  Workers=4
+  ETA: 00:56:38 remaining
+======================================================================
+  Running: diskspd -b512 -d60 -W30 -o16 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=302616  min=302616  max=302616
+    BW:      147.76 MiB/s
+    Latency: avg=211us  p50=207us  p99=347us  p99.9=411us
+    CPU:     93.74%
+
+
+======================================================================
+TEST 37/70 : 037-rand-read-bs512-qd32
+  Block=512  QueueDepth=32  Write=0%  Workers=4
+  ETA: 00:55:10 remaining
+======================================================================
+  Running: diskspd -b512 -d60 -W30 -o32 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=338884  min=338884  max=338884
+    BW:      165.47 MiB/s
+    Latency: avg=378us  p50=372us  p99=605us  p99.9=718us
+    CPU:     92.61%
+
+
+======================================================================
+TEST 38/70 : 038-rand-read-bs512-qd64
+  Block=512  QueueDepth=64  Write=0%  Workers=4
+  ETA: 00:53:38 remaining
+======================================================================
+  Running: diskspd -b512 -d60 -W30 -o64 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=350018  min=350018  max=350018
+    BW:      170.91 MiB/s
+    Latency: avg=731us  p50=736us  p99=1132us  p99.9=1405us
+    CPU:     95.19%
+
+
+======================================================================
+TEST 39/70 : 039-rand-read-bs512-qd128
+  Block=512  QueueDepth=128  Write=0%  Workers=4
+  ETA: 00:52:05 remaining
+======================================================================
+  Running: diskspd -b512 -d60 -W30 -o128 -t4 -Sh -L -w0 -r #1 
+
+  RESULTS: 
+    IOPS:    avg=325220  min=325220  max=325220
+    BW:      158.8 MiB/s
+    Latency: avg=1574us  p50=1590us  p99=2002us  p99.9=2351us
+    CPU:     99.62%
+
+
+====================================================================== 
+TEST 40/70 : 040-rand-read-bs512-qd256
+  Block=512  QueueDepth=256  Write=0%  Workers=4
+  ETA: 00:00:00 remaining
+====================================================================== 
+  Running: diskspd -b512 -d60 -W30 -o256 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS:
+    IOPS:    avg=217321  min=217321  max=217321
+    BW:      106.11 MiB/s
+    Latency: avg=4693us  p50=4747us  p99=5215us  p99.9=6613us
+    CPU:     100%
+
+
+====================================================================== 
+TEST 41/70 : 041-rand-read-bs4K-qd16
+  Block=4K  QueueDepth=16  Write=0%  Workers=4
+  ETA: 00:01:20 remaining
+====================================================================== 
+  Running: diskspd -b4K -d60 -W30 -o16 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%
+
+  RESULTS:
+    IOPS:    avg=227202  min=227202  max=227202
+    BW:      887.51 MiB/s
+    Latency: avg=266us  p50=267us  p99=344us  p99.9=384us
+    CPU:     99.98%
+
+
+======================================================================
+TEST 42/70 : 042-rand-read-bs4K-qd32
+  Block=4K  QueueDepth=32  Write=0%  Workers=4
+  Running: diskspd -b4K -d60 -W30 -o32 -t4 -Sh -L -w0 -r #1
+[1/2]    100.0%
+[2/2]    100.0%
+
+  RESULTS:
+    IOPS:    avg=220361  min=220361  max=220361
+    BW:      860.79 MiB/s
+    Latency: avg=572us  p50=569us  p99=667us  p99.9=1214us
+    CPU:     100%
+
+
+======================================================================
+TEST 43/70 : 043-rand-read-bs4K-qd64
+  Block=4K  QueueDepth=64  Write=0%  Workers=4
+  ETA: 00:03:34 remaining
+======================================================================
+  Running: diskspd -b4K -d60 -W30 -o64 -t4 -Sh -L -w0 -r #1
+[1/2]    100.0%
+[2/2]    100.0%
+
+  RESULTS:
+    IOPS:    avg=219264  min=219264  max=219264
+    BW:      856.5 MiB/s
+    Latency: avg=1149us  p50=1145us  p99=1281us  p99.9=1462us
+    CPU:     100%
+
+
+======================================================================
+TEST 44/70 : 044-rand-read-bs4K-qd128
+  Block=4K  QueueDepth=128  Write=0%  Workers=4
+  ETA: 00:04:29 remaining
+======================================================================
+  Running: diskspd -b4K -d60 -W30 -o128 -t4 -Sh -L -w0 -r #1
+[1/2]    100.0%
+[2/2]    100.0%
+
+  RESULTS:
+    IOPS:    avg=227501  min=227501  max=227501
+    BW:      888.68 MiB/s
+    Latency: avg=2233us  p50=2235us  p99=2523us  p99.9=2727us
+    CPU:     100%
+
+
+======================================================================
+  Running: diskspd -b4K -d60 -W30 -o32 -t4 -Sh -L -w0 -r #1[1/2]    100.0%[2/2]    100.0%
+  RESULTS:    IOPS:    avg=220361  min=220361  max=220361
+    BW:      860.79 MiB/s    Latency: avg=572us  p50=569us  p99=667us  p99.9=1214us    CPU:     100%
+======================================================================
+TEST 43/70 : 043-rand-read-bs4K-qd64  Block=4K  QueueDepth=64  Write=0%  Workers=4  ETA: 00:03:34 remaining
+======================================================================  Running: diskspd -b4K -d60 -W30 -o64 -t4 -Sh -L -w0 -r #1[1/2]    100.0%
+[2/2]    100.0%  RESULTS:
+    IOPS:    avg=219264  min=219264  max=219264    BW:      856.5 MiB/s    Latency: avg=1149us  p50=1145us  p99=1281us  p99.9=1462us
+    CPU:     100%
+======================================================================TEST 44/70 : 044-rand-read-bs4K-qd128  Block=4K  QueueDepth=128  Write=0%  Workers=4
+  ETA: 00:04:29 remaining======================================================================  Running: diskspd -b4K -d60 -W30 -o128 -t4 -Sh -L -w0 -r #1
+[1/2]    100.0%[2/2]    100.0%
+  RESULTS:    IOPS:    avg=227501  min=227501  max=227501    BW:      888.68 MiB/s
+    Latency: avg=2233us  p50=2235us  p99=2523us  p99.9=2727us    CPU:     100%
+======================================================================TEST 45/70 : 045-rand-read-bs4K-qd256
+  Block=4K  QueueDepth=256  Write=0%  Workers=4  ETA: 00:05:16 remaining======================================================================
+  Running: diskspd -b4K -d60 -W30 -o256 -t4 -Sh -L -w0 -r #1[1/2]    100.0%[2/2]    100.0%
+  RESULTS:    IOPS:    avg=214242  min=214242  max=214242
+    BW:      836.88 MiB/s    Latency: avg=4766us  p50=4843us  p99=5253us  p99.9=7852us    CPU:     100%
+======================================================================
+TEST 46/70 : 046-rand-read-bs16K-qd16  Block=16K  QueueDepth=16  Write=0%  Workers=4  ETA: 00:05:57 remaining
+======================================================================  Running: diskspd -b16K -d60 -W30 -o16 -t4 -Sh -L -w0 -r #1[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=222074  min=222074  max=222074
+    BW:      3469.91 MiB/s
+    Latency: avg=275us  p50=274us  p99=355us  p99.9=402us
+    CPU:     100%
+
+
+======================================================================
+TEST 47/70 : 047-rand-read-bs16K-qd32
+  Block=16K  QueueDepth=32  Write=0%  Workers=4
+  ETA: 00:06:31 remaining
+======================================================================
+  Running: diskspd -b16K -d60 -W30 -o32 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=220511  min=220511  max=220511
+    BW:      3445.49 MiB/s
+    Latency: avg=570us  p50=571us  p99=670us  p99.9=723us
+    CPU:     99.99%
+
+
+======================================================================
+TEST 48/70 : 048-rand-read-bs16K-qd64
+  Block=16K  QueueDepth=64  Write=0%  Workers=4
+  ETA: 00:06:59 remaining
+======================================================================
+  Running: diskspd -b16K -d60 -W30 -o64 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=220112  min=220112  max=220112
+    BW:      3439.25 MiB/s
+    Latency: avg=1145us  p50=1145us  p99=1293us  p99.9=1420us
+    CPU:     100%
+
+
+======================================================================
+TEST 49/70 : 049-rand-read-bs16K-qd128
+  Block=16K  QueueDepth=128  Write=0%  Workers=4
+  ETA: 00:07:21 remaining
+======================================================================
+  Running: diskspd -b16K -d60 -W30 -o128 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=217256  min=217256  max=217256
+    BW:      3394.63 MiB/s
+    Latency: avg=2338us  p50=2324us  p99=2589us  p99.9=2945us
+    CPU:     100%
+
+
+======================================================================
+TEST 50/70 : 050-rand-read-bs16K-qd256
+  Block=16K  QueueDepth=256  Write=0%  Workers=4
+  ETA: 00:07:38 remaining
+======================================================================
+  Running: diskspd -b16K -d60 -W30 -o256 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=216156  min=216156  max=216156
+    BW:      3377.44 MiB/s
+    Latency: avg=4737us  p50=4730us  p99=5026us  p99.9=6149us
+    CPU:     100%
+
+
+======================================================================
+TEST 51/70 : 051-rand-read-bs64K-qd16
+  Block=64K  QueueDepth=16  Write=0%  Workers=4
+  ETA: 00:07:51 remaining
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o16 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=225377  min=225377  max=225377
+    BW:      14086.07 MiB/s
+    Latency: avg=284us  p50=282us  p99=433us  p99.9=512us
+    CPU:     99.99%
+
+
+======================================================================
+TEST 52/70 : 052-rand-read-bs64K-qd32
+  Block=64K  QueueDepth=32  Write=0%  Workers=4
+  ETA: 00:07:58 remaining
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o32 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=216999  min=216999  max=216999
+    BW:      13562.43 MiB/s
+    Latency: avg=590us  p50=587us  p99=745us  p99.9=832us
+    CPU:     99.99%
+
+
+======================================================================
+TEST 53/70 : 053-rand-read-bs64K-qd64
+  Block=64K  QueueDepth=64  Write=0%  Workers=4
+  ETA: 00:08:02 remaining
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o64 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=222329  min=222329  max=222329
+    BW:      13895.59 MiB/s
+    Latency: avg=1141us  p50=1135us  p99=1339us  p99.9=2166us
+    CPU:     99.99%
+
+
+======================================================================
+TEST 54/70 : 054-rand-read-bs64K-qd128
+  Block=64K  QueueDepth=128  Write=0%  Workers=4 
+  ETA: 00:08:01 remaining
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o128 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=212042  min=212042  max=212042
+    BW:      13252.62 MiB/s
+    Latency: avg=2410us  p50=2405us  p99=2657us  p99.9=3083us
+    CPU:     100%
+
+
+======================================================================
+TEST 55/70 : 055-rand-read-bs64K-qd256
+  Block=64K  QueueDepth=256  Write=0%  Workers=4
+  ETA: 00:07:56 remaining
+======================================================================
+  Running: diskspd -b64K -d60 -W30 -o256 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=225255  min=225255  max=225255
+    BW:      14078.45 MiB/s
+    Latency: avg=4546us  p50=4553us  p99=5183us  p99.9=6030us
+    CPU:     99.98%
+
+
+======================================================================
+TEST 56/70 : 056-rand-read-bs256K-qd16
+  Block=256K  QueueDepth=16  Write=0%  Workers=4
+  ETA: 00:07:48 remaining
+======================================================================
+  Running: diskspd -b256K -d60 -W30 -o16 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=224827  min=224827  max=224827
+    BW:      56206.68 MiB/s
+    Latency: avg=285us  p50=275us  p99=596us  p99.9=820us
+    CPU:     78.29%
+
+
+======================================================================
+TEST 57/70 : 057-rand-read-bs256K-qd32
+  Block=256K  QueueDepth=32  Write=0%  Workers=4 
+  ETA: 00:07:34 remaining
+======================================================================
+  Running: diskspd -b256K -d60 -W30 -o32 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=216741  min=216741  max=216741
+    BW:      54185.21 MiB/s
+    Latency: avg=590us  p50=578us  p99=1041us  p99.9=1327us
+    CPU:     87.89%
+
+
+======================================================================
+TEST 58/70 : 058-rand-read-bs256K-qd64
+  Block=256K  QueueDepth=64  Write=0%  Workers=4
+  ETA: 00:07:16 remaining
+======================================================================
+  Running: diskspd -b256K -d60 -W30 -o64 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=183178  min=183178  max=183178
+    BW:      45794.59 MiB/s
+    Latency: avg=1400us  p50=1246us  p99=2100us  p99.9=2758us
+    CPU:     76.49%
+
+
+======================================================================
+TEST 59/70 : 059-rand-read-bs256K-qd128
+  Block=256K  QueueDepth=128  Write=0%  Workers=4
+  ETA: 00:06:55 remaining
+======================================================================
+  Running: diskspd -b256K -d60 -W30 -o128 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=163475  min=163475  max=163475
+    BW:      40868.79 MiB/s
+    Latency: avg=3134us  p50=2602us  p99=6523us  p99.9=42015us
+    CPU:     63.08%
+
+
+======================================================================
+TEST 60/70 : 060-rand-read-bs256K-qd256
+  Block=256K  QueueDepth=256  Write=0%  Workers=4
+  ETA: 00:06:32 remaining
+====================================================================== 
+  Running: diskspd -b256K -d60 -W30 -o256 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=71550  min=71550  max=71550
+    BW:      17887.38 MiB/s
+    Latency: avg=8882us  p50=2465us  p99=138966us  p99.9=345249us
+    CPU:     95.36%
+
+
+======================================================================
+TEST 61/70 : 061-rand-read-bs1M-qd16
+  Block=1M  QueueDepth=16  Write=0%  Workers=4
+  ETA: 00:06:11 remaining
+======================================================================
+  Running: diskspd -b1M -d60 -W30 -o16 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0%  
+
+  RESULTS: 
+    IOPS:    avg=53168  min=53168  max=53168
+    BW:      53167.69 MiB/s
+    Latency: avg=1198us  p50=987us  p99=2084us  p99.9=2636us
+    CPU:     61.21%
+
+
+======================================================================
+TEST 62/70 : 062-rand-read-bs1M-qd32
+  Block=1M  QueueDepth=32  Write=0%  Workers=4
+  ETA: 00:05:43 remaining
+======================================================================
+  Running: diskspd -b1M -d60 -W30 -o32 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=20604  min=20604  max=20604
+    BW:      20604.12 MiB/s
+    Latency: avg=6160us  p50=3194us  p99=9958us  p99.9=431063us
+    CPU:     64.92%
+
+
+======================================================================
+TEST 63/70 : 063-rand-read-bs1M-qd64
+  Block=1M  QueueDepth=64  Write=0%  Workers=4
+  ETA: 00:05:12 remaining
+====================================================================== 
+  Running: diskspd -b1M -d60 -W30 -o64 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=17626  min=17626  max=17626
+    BW:      17626.05 MiB/s
+    Latency: avg=14521us  p50=11187us  p99=41011us  p99.9=905356us
+    CPU:     49.55%
+
+
+======================================================================
+TEST 64/70 : 064-rand-read-bs1M-qd128
+  Block=1M  QueueDepth=128  Write=0%  Workers=4
+  ETA: 00:04:40 remaining
+======================================================================
+  Running: diskspd -b1M -d60 -W30 -o128 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=17020  min=17020  max=17020
+    BW:      17020.33 MiB/s
+    Latency: avg=41009us  p50=5723us  p99=276776us  p99.9=4436581us
+    CPU:     78.42%
+
+
+======================================================================
+TEST 65/70 : 065-rand-read-bs1M-qd256
+  Block=1M  QueueDepth=256  Write=0%  Workers=4
+  ETA: 00:04:10 remaining
+======================================================================
+  Running: diskspd -b1M -d60 -W30 -o256 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=17993  min=17993  max=17993
+    BW:      17993.41 MiB/s
+    Latency: avg=56419us  p50=7294us  p99=1081389us  p99.9=6541353us
+    CPU:     88.73%
+
+
+======================================================================
+TEST 66/70 : 066-rand-read-bs2M-qd16
+  Block=2M  QueueDepth=16  Write=0%  Workers=4
+  ETA: 00:03:33 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o16 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=24054  min=24054  max=24054
+    BW:      48108.03 MiB/s
+    Latency: avg=2664us  p50=2088us  p99=4422us  p99.9=18188us
+    CPU:     38.4%
+ 
+
+======================================================================
+TEST 67/70 : 067-rand-read-bs2M-qd32
+  Block=2M  QueueDepth=32  Write=0%  Workers=4
+  ETA: 00:02:54 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o32 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=21920  min=21920  max=21920
+    BW:      43840.82 MiB/s
+    Latency: avg=5839us  p50=4641us  p99=9842us  p99.9=92943us
+    CPU:     44.24%
+
+
+======================================================================
+TEST 68/70 : 068-rand-read-bs2M-qd64
+  Block=2M  QueueDepth=64  Write=0%  Workers=4
+  ETA: 00:02:13 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o64 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+
+  RESULTS: 
+    IOPS:    avg=13896  min=13896  max=13896
+    BW:      27792.46 MiB/s
+    Latency: avg=18391us  p50=16729us  p99=36508us  p99.9=495351us
+    CPU:     49.62%
+
+
+======================================================================
+TEST 69/70 : 069-rand-read-bs2M-qd128
+  Block=2M  QueueDepth=128  Write=0%  Workers=4
+  ETA: 00:01:30 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o128 -t4 -Sh -L -w0 -r #1 
+[1/2]    100.0%  
+[2/2]    100.0% 
+[2/2]    100.0%
+
+  RESULTS:
+    IOPS:    avg=21920  min=21920  max=21920
+    BW:      43840.82 MiB/s
+    Latency: avg=5839us  p50=4641us  p99=9842us  p99.9=92943us
+    CPU:     44.24%
+
+
+======================================================================
+TEST 68/70 : 068-rand-read-bs2M-qd64
+  Block=2M  QueueDepth=64  Write=0%  Workers=4
+  ETA: 00:02:13 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o64 -t4 -Sh -L -w0 -r #1
+[1/2]    100.0%
+[2/2]    100.0%
+
+  RESULTS:
+    IOPS:    avg=13896  min=13896  max=13896
+    BW:      27792.46 MiB/s
+    Latency: avg=18391us  p50=16729us  p99=36508us  p99.9=495351us
+    CPU:     49.62%
+
+
+======================================================================
+TEST 69/70 : 069-rand-read-bs2M-qd128
+  Block=2M  QueueDepth=128  Write=0%  Workers=4
+  ETA: 00:01:30 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o128 -t4 -Sh -L -w0 -r #1
+[1/2]    100.0%
+[2/2]    100.0%
+ 
+  RESULTS:
+    IOPS:    avg=10229  min=10229  max=10229
+    BW:      20458.45 MiB/s
+    Latency: avg=44097us  p50=9635us  p99=389895us  p99.9=4372921us
+    CPU:     86.21%
+
+
+======================================================================
+TEST 70/70 : 070-rand-read-bs2M-qd256
+  Block=2M  QueueDepth=256  Write=0%  Workers=4
+  ETA: 00:00:45 remaining
+======================================================================
+  Running: diskspd -b2M -d60 -W30 -o256 -t4 -Sh -L -w0 -r #1
+[1/2]    100.0%
+[2/2]    100.0%
+
+  RESULTS:
+    IOPS:    avg=11010  min=11010  max=11010
+    BW:      22020.23 MiB/s
+    Latency: avg=82445us  p50=40399us  p99=691576us  p99.9=9245426us
+    CPU:     84.96%
+
+
+

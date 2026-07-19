@@ -1,0 +1,98 @@
+PS C:\Users\Administrator> C:\ProgramData\chocolatey\lib\diskspd\tools\amd64\diskspd.exe -c1G -d3600 -W600 -t4 -o256 -b4K -w100 -r -L -Sh D:\diskspd-test.dat
+
+*** Interrupted by Ctrl-C. Stopping I/O Request Generator. ***
+
+Command Line: C:\ProgramData\chocolatey\lib\diskspd\tools\amd64\diskspd.exe -c1G -d3600 -W600 -t4 -o256 -b4K -w100 -r -L -Sh D:\diskspd-test.dat
+
+Input parameters:
+
+        timespan:   1
+        -------------
+        duration: 3600s
+        warm up time: 600s
+        cool down time: 0s
+        measuring latency
+        random seed: 0
+        path: 'D:\diskspd-test.dat'
+                think time: 0ms
+                burst size: 0
+                software cache disabled
+                hardware write cache disabled, writethrough on
+                performing write test
+                block size: 4KiB
+                using random I/O (alignment: 4KiB)
+                number of outstanding I/O operations per thread: 256
+                threads per file: 4
+                using I/O Completion Ports
+                IO priority: normal
+
+System information:
+
+        computer name: DESKTOP-SOGETS3
+        start time: 2026/08/06 10:53:21 UTC
+
+Results for timespan 1:
+*******************************************************************************
+
+actual test time:       144.27s
+thread count:           4
+proc count:             2
+
+CPU |  Usage |  User  |  Kernel |  Idle
+-------------------------------------------
+   0|  34.73%|   6.01%|   28.72%|  65.27%
+   1|  91.43%|   2.34%|   89.09%|   8.57%
+-------------------------------------------
+avg.|  63.08%|   4.18%|   58.91%|  36.92%
+
+Total IO
+thread |       bytes     |     I/Os     |    MiB/s   |  I/O per s |  AvgLat  | LatStdDev |  file
+-----------------------------------------------------------------------------------------------------
+     0 |      4450553856 |      1086561 |      29.42 |    7531.53 |   33.987 |     8.399 | D:\diskspd-test.dat (1GiB)
+     1 |      3645374464 |       889984 |      24.10 |    6168.95 |   41.486 |    20.097 | D:\diskspd-test.dat (1GiB)
+     2 |      4450963456 |      1086661 |      29.42 |    7532.22 |   33.984 |     8.514 | D:\diskspd-test.dat (1GiB)
+     3 |      3614126080 |       882355 |      23.89 |    6116.07 |   41.844 |    23.263 | D:\diskspd-test.dat (1GiB)
+-----------------------------------------------------------------------------------------------------
+total:       16161017856 |      3945561 |     106.83 |   27348.77 |   37.435 |    16.313
+
+Read IO
+thread |       bytes     |     I/Os     |    MiB/s   |  I/O per s |  AvgLat  | LatStdDev |  file
+-----------------------------------------------------------------------------------------------------
+     0 |               0 |            0 |       0.00 |       0.00 |    0.000 |       N/A | D:\diskspd-test.dat (1GiB)
+     1 |               0 |            0 |       0.00 |       0.00 |    0.000 |       N/A | D:\diskspd-test.dat (1GiB)
+     2 |               0 |            0 |       0.00 |       0.00 |    0.000 |       N/A | D:\diskspd-test.dat (1GiB)
+     3 |               0 |            0 |       0.00 |       0.00 |    0.000 |       N/A | D:\diskspd-test.dat (1GiB)
+-----------------------------------------------------------------------------------------------------
+total:                 0 |            0 |       0.00 |       0.00 |    0.000 |       N/A
+
+Write IO
+thread |       bytes     |     I/Os     |    MiB/s   |  I/O per s |  AvgLat  | LatStdDev |  file
+-----------------------------------------------------------------------------------------------------
+     0 |      4450553856 |      1086561 |      29.42 |    7531.53 |   33.987 |     8.399 | D:\diskspd-test.dat (1GiB)
+     1 |      3645374464 |       889984 |      24.10 |    6168.95 |   41.486 |    20.097 | D:\diskspd-test.dat (1GiB)
+     2 |      4450963456 |      1086661 |      29.42 |    7532.22 |   33.984 |     8.514 | D:\diskspd-test.dat (1GiB)
+     3 |      3614126080 |       882355 |      23.89 |    6116.07 |   41.844 |    23.263 | D:\diskspd-test.dat (1GiB)
+-----------------------------------------------------------------------------------------------------
+total:       16161017856 |      3945561 |     106.83 |   27348.77 |   37.435 |    16.313
+
+
+
+total:
+  %-ile |  Read (ms) | Write (ms) | Total (ms)
+----------------------------------------------
+    min |        N/A |      3.999 |      3.999
+   25th |        N/A |     32.852 |     32.852
+   50th |        N/A |     35.597 |     35.597
+   75th |        N/A |     38.957 |     38.957
+   90th |        N/A |     45.268 |     45.268
+   95th |        N/A |     53.509 |     53.509
+   99th |        N/A |     99.130 |     99.130
+3-nines |        N/A |    225.008 |    225.008
+4-nines |        N/A |    442.051 |    442.051
+5-nines |        N/A |    605.987 |    605.987
+6-nines |        N/A |    607.060 |    607.060
+7-nines |        N/A |    607.106 |    607.106
+8-nines |        N/A |    607.106 |    607.106
+9-nines |        N/A |    607.106 |    607.106
+    max |        N/A |    607.106 |    607.106
+

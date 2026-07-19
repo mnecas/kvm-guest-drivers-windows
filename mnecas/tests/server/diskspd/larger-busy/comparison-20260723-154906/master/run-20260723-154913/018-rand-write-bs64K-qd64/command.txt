@@ -1,0 +1,1 @@
+﻿C:\ProgramData\chocolatey\lib\diskspd\tools\amd64\diskspd.exe -b64K -d60 -W30 -o64 -t4 -Sh -L -w100 -r #1

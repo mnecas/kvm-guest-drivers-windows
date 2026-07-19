@@ -1,0 +1,97 @@
+PS D:\> C:\ProgramData\chocolatey\lib\diskspd\tools\amd64\diskspd.exe -c1G -d300 -W60 -t4 -o256 -b4K -w100 -r -L -Sh D:\diskspd-test.dat     
+
+Command Line: C:\ProgramData\chocolatey\lib\diskspd\tools\amd64\diskspd.exe -c1G -d300 -W60 -t4 -o256 -b4K -w100 -r -L -Sh D:\diskspd-test.da
+t
+
+Input parameters:
+
+        timespan:   1
+        -------------
+        duration: 300s
+        warm up time: 60s
+        cool down time: 0s
+        measuring latency
+        random seed: 0
+        path: 'D:\diskspd-test.dat'
+                think time: 0ms
+                burst size: 0
+                software cache disabled
+                hardware write cache disabled, writethrough on
+                performing write test
+                block size: 4KiB
+                using random I/O (alignment: 4KiB)
+                number of outstanding I/O operations per thread: 256
+                threads per file: 4
+                using I/O Completion Ports
+                IO priority: normal
+
+System information:
+
+        computer name: DESKTOP-SOGETS3
+        start time: 2026/08/06 13:13:32 UTC
+
+Results for timespan 1:
+*******************************************************************************
+
+actual test time:       300.01s
+thread count:           4
+proc count:             2
+
+CPU |  Usage |  User  |  Kernel |  Idle
+-------------------------------------------
+   0|  55.30%|   7.37%|   47.93%|  44.70%
+   1|  97.18%|   1.80%|   95.38%|   2.82%
+-------------------------------------------
+avg.|  76.24%|   4.59%|   71.65%|  23.76%
+
+Total IO
+thread |       bytes     |     I/Os     |    MiB/s   |  I/O per s |  AvgLat  | LatStdDev |  file
+-----------------------------------------------------------------------------------------------------
+     0 |     17060843520 |      4165245 |      54.23 |   13883.81 |   18.437 |    10.007 | D:\diskspd-test.dat (1GiB)
+     1 |      4810854400 |      1174525 |      15.29 |    3914.99 |   65.248 |   100.815 | D:\diskspd-test.dat (1GiB)
+     2 |     17076645888 |      4169103 |      54.28 |   13896.67 |   18.419 |     9.971 | D:\diskspd-test.dat (1GiB)
+     3 |      4773015552 |      1165287 |      15.17 |    3884.19 |   65.837 |    98.627 | D:\diskspd-test.dat (1GiB)
+-----------------------------------------------------------------------------------------------------
+total:       43721359360 |     10674160 |     138.98 |   35579.65 |   28.756 |    51.362
+
+Read IO
+thread |       bytes     |     I/Os     |    MiB/s   |  I/O per s |  AvgLat  | LatStdDev |  file
+-----------------------------------------------------------------------------------------------------
+     0 |               0 |            0 |       0.00 |       0.00 |    0.000 |       N/A | D:\diskspd-test.dat (1GiB)
+     1 |               0 |            0 |       0.00 |       0.00 |    0.000 |       N/A | D:\diskspd-test.dat (1GiB)
+     2 |               0 |            0 |       0.00 |       0.00 |    0.000 |       N/A | D:\diskspd-test.dat (1GiB)
+     3 |               0 |            0 |       0.00 |       0.00 |    0.000 |       N/A | D:\diskspd-test.dat (1GiB)
+-----------------------------------------------------------------------------------------------------
+total:                 0 |            0 |       0.00 |       0.00 |    0.000 |       N/A
+
+Write IO
+thread |       bytes     |     I/Os     |    MiB/s   |  I/O per s |  AvgLat  | LatStdDev |  file
+-----------------------------------------------------------------------------------------------------
+     0 |     17060843520 |      4165245 |      54.23 |   13883.81 |   18.437 |    10.007 | D:\diskspd-test.dat (1GiB)
+     1 |      4810854400 |      1174525 |      15.29 |    3914.99 |   65.248 |   100.815 | D:\diskspd-test.dat (1GiB)
+     2 |     17076645888 |      4169103 |      54.28 |   13896.67 |   18.419 |     9.971 | D:\diskspd-test.dat (1GiB)
+     3 |      4773015552 |      1165287 |      15.17 |    3884.19 |   65.837 |    98.627 | D:\diskspd-test.dat (1GiB)
+-----------------------------------------------------------------------------------------------------
+total:       43721359360 |     10674160 |     138.98 |   35579.65 |   28.756 |    51.362
+
+
+
+total:
+  %-ile |  Read (ms) | Write (ms) | Total (ms)
+----------------------------------------------
+    min |        N/A |      2.258 |      2.258
+   25th |        N/A |     15.006 |     15.006
+   50th |        N/A |     17.419 |     17.419
+   75th |        N/A |     24.141 |     24.141
+   90th |        N/A |     39.222 |     39.222
+   95th |        N/A |     63.871 |     63.871
+   99th |        N/A |    285.985 |    285.985
+3-nines |        N/A |    633.737 |    633.737
+4-nines |        N/A |   1021.490 |   1021.490
+5-nines |        N/A |   1578.246 |   1578.246
+6-nines |        N/A |   1591.988 |   1591.988
+7-nines |        N/A |   1592.301 |   1592.301
+8-nines |        N/A |   1592.348 |   1592.348
+9-nines |        N/A |   1592.348 |   1592.348
+    max |        N/A |   1592.348 |   1592.348
+
